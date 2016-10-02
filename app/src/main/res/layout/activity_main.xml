@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.mymusic.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/music" />
+
+        <ImageButton
+            android:id="@+id/myMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/list" />
+
+        <ImageButton
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/heart_checked" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:checkedButton="@+id/radioButton_home"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingStart="80dp"
+        android:paddingTop="10dp"
+        android:weightSum="100">
+
+        <RadioButton
+            android:id="@id/radioButton_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:button="@drawable/selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="24.13"
+            android:button="@drawable/selector1"
+            android:gravity="center_horizontal" />
+
+        <RadioButton
+            android:id="@+id/radioButton_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:button="@drawable/selector2" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum="100">
+
+        <CheckBox
+            android:id="@+id/Button_favorite"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+android:layout_weight="10"
+            android:button="@drawable/favorite" />
+
+
+        <LinearLayout
+            android:id="@+id/information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/text_songName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="songName"
+
+                />
+
+            <TextView
+                android:id="@+id/text_singer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="singer"
+
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Button_playlist"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="10"
+            android:src="@drawable/playlist" />
+
+        <CheckBox
+            android:id="@+id/Button_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="20"
+            android:button="@drawable/sec_play" />
+
+        <ImageButton
+            android:id="@+id/Button_nextTrack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/next_track"
+             />
+    </LinearLayout>
+
+</LinearLayout>
